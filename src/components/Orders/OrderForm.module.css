@@ -1,0 +1,53 @@
+.orderform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.contact__title{
+    font-weight: normal;
+    text-align: center;
+}
+
+.orderform input {
+  border-radius: 0.5rem;
+  border: 2px solid var(--color-theme);
+
+  width: 90%;
+  font-size: 1.5rem;
+}
+
+.orderform input:focus .orderform input:active .orderform input:hover {
+  border: 2px solid #1ca210;
+  box-shadow: 0 0 0 1px #1ca210;
+}
+
+.orderform button {
+  background-color: var(--color-secondary-light);
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 1.5rem;
+  width: 90%;
+}
+
+.orderform button:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+@media screen and (max-width: 400px) {
+  .orderform input {
+    width: 100%;
+  }
+
+  .contact__title{
+    font-weight: 500;
+}
+
+  .orderform button {
+    width: 100%;
+  }
+}

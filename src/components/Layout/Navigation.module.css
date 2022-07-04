@@ -1,0 +1,255 @@
+.main_nav {
+  background-color: var(--color-theme);
+  padding: 1rem;
+  position: fixed;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.main_nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.nav_element {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.nav_logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  text-decoration: none;
+  /* font-size: 1.6rem; */
+  text-transform: uppercase;
+}
+
+.nav_menus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu {
+  margin-right: 4rem;
+  /* font-size: 1.6rem; */
+}
+
+.nav_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logoutbtn {
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #1ad1b9;
+}
+
+.logoutbtn:hover,
+.logoutbtn:active,
+.logoutbtn:focus {
+  color: var(--color-theme);
+  background-color: white;
+  border: 1px solid white;
+}
+
+.button {
+  background-color: transparent;
+  border: 1px solid #1ad1b9;
+  border-radius: 0.5rem;
+  color: black;
+  padding: 0.5rem;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  color: #1ad1b9;
+}
+
+.button span {
+  margin: 0 0.5rem;
+}
+
+.badge {
+  background-color: #1ad1b9;
+  border-radius: 2rem;
+  padding: 0.15rem 1.25rem;
+  color: #1d1d1d;
+}
+
+.navigation__button {
+  background-color: black;
+}
+
+.icon__btn {
+  color: white;
+  border: 0;
+  display: none;
+  margin-right: 0.8rem;
+}
+
+.feature__icon {
+  fill: black;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.feature__icon_switch{
+  fill: black;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.feature__icon_switch:hover{
+  fill: red;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.cart__menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* .badge__icon {
+  display: none;
+}
+
+.cart__icon {
+  display: none;
+} */
+
+.cart_link{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav_element {
+    font-size: 1.4rem;
+  }
+
+  .nav_menus {
+    display: none;
+  }
+
+  .logo{
+    margin-top: 0.4rem;
+  }
+
+  .menu{
+    margin-top: 0.4rem;
+    margin-right: 1.5rem;
+  }
+
+  .logoutbtn {
+    font-size: 1.4rem;
+  }
+
+  .icon__btn {
+    color: white;
+    border: 0;
+    display: block;
+  }
+
+  .cart_link{
+    display: block;
+    margin-right: 1.5rem;
+  }
+
+  .cart__icon {
+    fill: black;
+    fill: #c69963;
+    height: 2.25rem;
+    width: 2.25rem;
+    margin-top: -1rem;
+  }
+
+  .badge__icon {
+    font-weight: bold;
+    text-align: center;
+    color: #1d1d1d;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .nav_element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cart_link{
+    display: block;
+    margin-right: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .nav_element {
+    font-size: 1.2rem;
+  }
+
+  .logo{
+    word-wrap:break-word;
+    overflow-wrap: break-word;
+    max-width: 20ch;
+  }
+
+  .menu {
+    margin-right: 1.0rem;
+  }
+
+  .feature__icon{
+    fill: black;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .feature__icon_switch{
+    fill: black;
+    height: 2rem;
+    width: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 295px) {
+
+  .logo{
+    word-wrap:break-word;
+    overflow-wrap: break-word;
+    max-width: 6ch;
+    /* text-transform: capitalize; */
+  }
+
+  /* .feature__icon{
+    fill: black;
+    height: 1.5rem;
+    width: 1.5rem;
+  } */
+
+  .feature__icon_switch{
+    fill: black;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+}
+

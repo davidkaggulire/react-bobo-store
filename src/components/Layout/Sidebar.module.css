@@ -1,0 +1,41 @@
+.sidebar {
+  display: none;
+}
+
+.side__element {
+  list-style-type: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.side__link {
+  padding-bottom: 2rem;
+}
+
+.side__link a {
+  text-decoration: none;
+}
+
+.side__icon {
+  text-align: right;
+}
+
+.feature__icon {
+  fill: black;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.side__footer {
+  list-style-type: none;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+  }
+}

@@ -1,0 +1,24 @@
+.receipt_section {
+  margin: 0 auto;
+  font-size: 1.4rem;
+  width: 45%;
+}
+
+.total{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+  .receipt_section {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .receipt_section {
+    width: 90%;
+  }
+}

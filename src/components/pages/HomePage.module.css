@@ -1,0 +1,250 @@
+.welcome_section{
+  padding: 2rem;
+  height: 85vh;
+  width: 100%;
+  border-radius: 0.5rem;
+  margin:2rem;
+  
+  font-size: 1.4rem;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #008B8B;
+  background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark));
+  
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.image{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  clip-path: polygon(0 0, 70% 0%, 100% 0, 100% 100%, 81% 75%, 70% 87%, 54% 77%, 0 100%);
+}
+
+.welcome_section img {
+  /* text-align: center; */
+  height: 40rem;
+  margin: 2rem;
+  border-radius: 2rem;
+}
+
+.mainheading {
+  margin-top: 0.5rem;
+  font-size: 5.5rem;;
+  color:#eee;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  letter-spacing: 1.0rem;
+  animation-timing-function: .4s ease-in;
+  text-transform: capitalize;
+}
+
+.footer {
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+.footer_element {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 5rem;
+}
+
+.footer_element a {
+  text-decoration: none;
+  color: var(--color-grey-dark-2);
+} 
+
+@media screen and (max-width: 780px) {
+  .welcome_section{
+    height: 75vh;
+  }
+
+  .mainheading {
+    font-size: 5.0rem;;
+    text-align: center;
+    letter-spacing: 1.0rem;
+    animation-timing-function: .4s ease-in;
+  }
+
+  .image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .welcome_section img {
+    height: 30rem;
+    margin: 2rem;
+    border-radius: 2rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .footer_element {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .welcome_section{
+    height: 75vh;
+  }
+
+  .mainheading {
+    font-size: 5.5rem;;
+    text-align: center;
+    letter-spacing: 1.0rem;
+    animation-timing-function: .4s ease-in;
+  }
+
+  .image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .welcome_section img {
+    height: 30rem;
+    margin: 2rem;
+    border-radius: 2rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .footer_element {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 600px){
+  .welcome_section{
+    border-radius: 0;
+    margin:0;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .welcome_section{
+    height: 75vh;
+  }
+
+  .mainheading {
+    font-size: 4.5rem;;
+    text-align: center;
+    letter-spacing: 1.0rem;
+    animation-timing-function: .4s ease-in;
+  }
+
+  .image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .welcome_section img {
+    height: 25rem;
+    margin: 2rem;
+    border-radius: 2rem;
+  }
+
+  .footer {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .footer_element {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 345px) {
+  .mainheading {
+    font-size: 4.0rem;
+    text-align: center;
+    letter-spacing: 1.0rem;
+    animation-timing-function: .4s ease-in;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .welcome_section{
+    margin:0;
+    padding:0
+  }
+
+  .mainheading {
+    font-size: 3.0rem;
+    text-align: center;
+    letter-spacing: 1.0rem;
+    animation-timing-function: .4s ease-in;
+  }
+
+  .welcome_section img {
+    height: 25rem;
+    margin: 2rem;
+    border-radius: 2rem;
+  }
+
+  .footer_element {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 225px) {
+  .mainheading {
+    margin-top: 2rem;
+    font-size: 2.5rem;;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    animation-timing-function: .4s ease-in;
+  }
+
+  .image{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .welcome_section img {
+    height: 20rem;
+  }
+
+}
+
+
+
+
