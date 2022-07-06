@@ -36,7 +36,7 @@ const CartItem = (props) => {
             </button>
             <span className={classes.btnspan}></span>
             <button onClick={removeItemFromCart} className={classes.deletebtn}>
-              Delete
+              Remove
             </button>
           </div>
         </div>
