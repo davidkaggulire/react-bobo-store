@@ -210,10 +210,12 @@
     word-wrap:break-word;
     overflow-wrap: break-word;
     max-width: 20ch;
+    font-size: 1.5rem;
   }
 
   .menu {
     margin-right: 1.0rem;
+    font-size: 1.5rem;
   }
 
   .feature__icon{
@@ -236,8 +238,11 @@
     word-wrap:break-word;
     overflow-wrap: break-word;
     max-width: 6ch;
+    font-size: 1.5rem;
     /* text-transform: capitalize; */
   }
+
+  
 
   /* .feature__icon{
     fill: black;
