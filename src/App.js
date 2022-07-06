@@ -32,6 +32,10 @@ const PaymentConfirmPage = React.lazy(() =>
   import("./components/payments/PaymentConfirmPage")
 );
 
+const ResetPassword = React.lazy(() =>
+  import("./components/auth/ResetPassword")
+);
+
 let logoutTimer;
 
 function App() {
@@ -74,6 +78,7 @@ function App() {
           {isLoggedIn && <Route path="/orders" element={<OrderPage />} />}
           {isLoggedIn && <Route path="/payments" element={<PaymentsPage />} />}
           {isLoggedIn && <Route path="/paymentConfirm" element={<PaymentConfirmPage />} />}
+          <Route path="/resetPassword" element={<ResetPassword />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
