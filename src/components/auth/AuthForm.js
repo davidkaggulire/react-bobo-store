@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState, useRef, useReducer } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { postAuthData } from "../../store/login-actions";
 import Input from "../UI/Input";
 
@@ -188,6 +188,7 @@ const AuthForm = () => {
               {isLogin ? "Create new account" : "Login with existing account"}
             </button>
           </div>
+          <Link to="/resetPassword" className={classes.forgot__link}>Forgot Password</Link>
         </form>
       </section>
     </Fragment>
