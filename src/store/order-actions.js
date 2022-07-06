@@ -8,14 +8,18 @@ export const postOrderData = (inputData, url, navigate, setIsLoading) => {
       const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
+          email: inputData.email,
+          displayName: inputData.displayName,
           firstName: inputData.contactInfo.firstName,
           lastName: inputData.contactInfo.lastName,
           country: inputData.contactInfo.country,
           address: inputData.contactInfo.address,
           city: inputData.contactInfo.city,
+          orderData: inputData.orderData
         }),
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
         },
       });
 
