@@ -10,6 +10,8 @@ const PaymentDialog = (props) => {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
   const contactInfo = useSelector((state) => state.contact.contactData);
+  const email = useSelector(state=> state.login.email);
+  const displayName = useSelector(state => state.login.displayName);
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
 
@@ -17,11 +19,13 @@ const PaymentDialog = (props) => {
     setIsLoading(true);
 
     const url =
-      "https://us-central1-bobostore-3aabe.cloudfunctions.net/app/api/v1/users/orders";
+      "https://us-central1-bobostore-3aabe.cloudfunctions.net/app/api/v1/orders";
 
     const inputData = {
       contactInfo,
-      orderItems: cartItems,
+      orderData: cartItems,
+      email,
+      displayName
     };
 
     console.log(inputData);
