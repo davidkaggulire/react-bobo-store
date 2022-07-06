@@ -1,5 +1,6 @@
 import { loginActions } from "./loginSlice";
 import { uiActions } from "./ui-slice";
+import sendVerificationEmail from "./sendEmailVerification";
 
 export const postAuthData = (inputData, url, navigate, setIsLoading) => {
   return async (dispatch) => {
@@ -56,16 +57,33 @@ export const postAuthData = (inputData, url, navigate, setIsLoading) => {
         const expirationTime = new Date(new Date().getTime() + (+authData.expiresIn * 1000));
         console.log(authData);
 
-        dispatch(
-          loginActions.login({
-            token: authData.idToken,
-            expirationTime: expirationTime.toISOString(),
-            displayName: authData.displayName,
-            email: authData.email
-          })
-        );
+        if (authData.emailVerified){
+          dispatch(
+            loginActions.login({
+              token: authData.idToken,
+              expirationTime: expirationTime.toISOString(),
+              displayName: authData.displayName,
+              email: authData.email,
+              emailVerified: authData.emailVerified
+            })
+          );
+  
+          navigate("../products", { replace: true });
+        }else {
+          await sendVerificationEmail(inputData.email, inputData.name);
 
-        navigate("../products", { replace: true });
+          dispatch(
+            uiActions.setNotification({
+              status: "success",
+              message: "Sent email verification link"
+            })
+          );
+
+          setIsLoading(false);
+
+          navigate("../auth", { replace: true });
+        }
+
       } 
 
         
@@ -81,6 +99,7 @@ export const postAuthData = (inputData, url, navigate, setIsLoading) => {
       dispatch(
         uiActions.setNotification({
           status: "error",
+          message: error
         })
       );
     }
