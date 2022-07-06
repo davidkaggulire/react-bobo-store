@@ -52,6 +52,10 @@
   color: var(--color-theme);
 }
 
+.forgot__link{
+  font-size: 1.4rem;
+}
+
 @media screen and (max-width: 900px) {
     .authform{
         width: 50%;
