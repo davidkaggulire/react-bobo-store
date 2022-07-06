@@ -1,15 +1,15 @@
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 // import Orders from "../Orders/Orders";
 import Card from "../UI/Card";
 import classes from "./PaymentConfirmPage.module.css";
 
 const PaymentConfirmPage = () => {
-  const cartItems = useSelector((state) => state.cart.items);
+  // const cartItems = useSelector((state) => state.cart.items);
 
   //  get total price
-  const total = cartItems
-    .map((item) => item.totalPrice)
-    .reduce((prev, curr) => prev + curr, 0);
+  // const total = cartItems
+  //   .map((item) => item.totalPrice)
+  //   .reduce((prev, curr) => prev + curr, 0);
 
   return (
     <div className={classes.receipt_section}>
@@ -30,12 +30,12 @@ const PaymentConfirmPage = () => {
               totalPrice={item.totalPrice}
             />
           ))} */}
-        <div className={classes.total}>
+        {/* <div className={classes.total}>
           <h3>Total</h3>
           <p>
             $ <span>{total}</span>
           </p>
-        </div>
+        </div> */}
       </Card>
     </div>
   );
