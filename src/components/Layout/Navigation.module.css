@@ -46,6 +46,14 @@
   /* font-size: 1.6rem; */
 }
 
+/* .menu:hover {
+  color:#1ad1b9;
+} */
+
+.menu a:hover {
+  color:var(--color-secondary-dark);
+}
+
 .nav_buttons {
   display: flex;
   flex-direction: row;
