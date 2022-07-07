@@ -16,6 +16,10 @@
   text-decoration: none;
 }
 
+.side__link:hover {
+  color: orange;
+}
+
 .side__icon {
   text-align: right;
 }
