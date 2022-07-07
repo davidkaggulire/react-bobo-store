@@ -18,6 +18,9 @@ const Sidebar = (props) => {
                 <Link to="/products">Products</Link>
               </li>
               <li onClick={props.onClose} className={classes.side__link}>
+                <Link to="/cart">Cart</Link>
+              </li>
+              <li onClick={props.onClose} className={classes.side__link}>
                 <Link to="/profile">Profile</Link>
               </li>
               <li onClick={props.onClose} className={classes.side__link}>
