@@ -46,6 +46,11 @@
   font-size: 1.6rem;
 }
 
+.actions button:hover {
+  color: white;
+  background-color: blueviolet;
+}
+
 .toggle {
   border: none;
   background-color: transparent;
