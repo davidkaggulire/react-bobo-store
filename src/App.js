@@ -6,6 +6,7 @@ import Layout from "./components/Layout/Layout";
 import NotFound from "./components/pages/NotFound";
 import { loginActions } from "./store/loginSlice";
 import { calculateRemainingTime } from "./store/retrieveStoredToken";
+import { fetchOrderData } from "./store/order-actions";
 
 const AuthPage = React.lazy(() => import("./components/pages/AuthPage"));
 const HomePage = React.lazy(() => import("./components/pages/HomePage"));
@@ -20,9 +21,7 @@ const ProductDetail = React.lazy(() =>
   import("./components/products/ProductDetail")
 );
 
-const OrderPage = React.lazy(() =>
-  import("./components/pages/OrderPage")
-);
+const OrderPage = React.lazy(() => import("./components/pages/OrderPage"));
 
 const PaymentsPage = React.lazy(() =>
   import("./components/pages/PaymentsPage")
@@ -36,14 +35,20 @@ const ResetPassword = React.lazy(() =>
   import("./components/auth/ResetPassword")
 );
 
+const RealOrdersPage = React.lazy(() =>
+  import("./components/pages/RealOrdersPage")
+);
+
 let logoutTimer;
 
 function App() {
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
   const navigate = useNavigate();
- 
-  const expirationTime = useSelector(state => state.login.expirationTime);
+
+  const expirationTime = useSelector((state) => state.login.expirationTime);
+  const token = useSelector((state) => state.login.token);
   const dispatch = useDispatch();
+
   const logoutHandler = useCallback(() => {
     if (logoutTimer) {
       clearTimeout(logoutTimer);
@@ -51,19 +56,26 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if(isLoggedIn){
+    if (isLoggedIn) {
       const remainingTime = calculateRemainingTime(expirationTime);
-      dispatch(loginActions.expire({
-        remainingTime: remainingTime
-      }))
+      dispatch(
+        loginActions.expire({
+          remainingTime: remainingTime,
+        })
+      );
       console.log(remainingTime);
-      logoutTimer = setTimeout(logoutHandler, remainingTime)
-      if (remainingTime < 0){
+      logoutTimer = setTimeout(logoutHandler, remainingTime);
+      if (remainingTime < 0) {
         navigate("../", { replace: true });
       }
     }
-    
-  }, [logoutHandler, isLoggedIn, expirationTime, dispatch, navigate])
+  }, [logoutHandler, isLoggedIn, expirationTime, dispatch, navigate]);
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      dispatch(fetchOrderData(token));
+    }
+  }, [dispatch, isLoggedIn, token]);
 
   return (
     <Layout>
@@ -77,7 +89,12 @@ function App() {
           {isLoggedIn && <Route path="/profile" element={<ProfilePage />} />}
           {isLoggedIn && <Route path="/orders" element={<OrderPage />} />}
           {isLoggedIn && <Route path="/payments" element={<PaymentsPage />} />}
-          {isLoggedIn && <Route path="/paymentConfirm" element={<PaymentConfirmPage />} />}
+          {isLoggedIn && (
+            <Route path="/paymentConfirm" element={<PaymentConfirmPage />} />
+          )}
+          {isLoggedIn && (
+            <Route path="/realorders" element={<RealOrdersPage />} />
+          )}
           <Route path="/resetPassword" element={<ResetPassword />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
