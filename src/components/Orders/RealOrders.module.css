@@ -1,0 +1,138 @@
+.order_item {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border-bottom: 2px solid var(--color-theme); */
+}
+
+.order_item:hover {
+  border-bottom: 2px solid var(--color-theme);
+}
+
+.order__image {
+  width: 10%;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.order_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.actions {
+  display: flex;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  /* padding: 2rem; */
+}
+
+.title {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.status {
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.status__pending {
+  background-color: orangered;
+}
+
+.status__delivered {
+  background-color: green;
+}
+
+.status__cancelled {
+  background-color: red;
+}
+
+@media screen and (max-width: 1000px) {
+  .order__image {
+    width: 15%;
+    height: 15rem;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .order_item {
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .order__image {
+    width: 20%;
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .order__image {
+    width: 25%;
+    height: 8rem;
+  }
+
+  .details {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 65%;
+    /* padding: 2rem; */
+  }
+
+  .status {
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 305px) {
+  .order_item {
+    display: grid;
+    /* flex-direction: column; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .order__image {
+    width: 100%;
+    height: 80%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .cart__totalprice {
+    text-align: right;
+  }
+
+  .status {
+    /* text-align: center; */
+    padding: 0.5rem;
+    grid-row: 2 / 3;
+    grid-column: 2 /3;
+  }
+}
