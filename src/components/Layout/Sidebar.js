@@ -1,8 +1,11 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import DropDown from "../UI/DropDown";
 import classes from "./Sidebar.module.css";
 
 const Sidebar = (props) => {
+  const isLoggedIn = useSelector((state) => state.login.isLoggedIn); 
+
   return (
     <DropDown onClose={props.onClose}>
       <div>
@@ -17,12 +20,17 @@ const Sidebar = (props) => {
               <li onClick={props.onClose} className={classes.side__link}>
                 <Link to="/products">Products</Link>
               </li>
-              <li onClick={props.onClose} className={classes.side__link}>
+
+              {isLoggedIn && <li onClick={props.onClose} className={classes.side__link}>
                 <Link to="/cart">Cart</Link>
-              </li>
-              <li onClick={props.onClose} className={classes.side__link}>
+              </li>}
+
+              {isLoggedIn && <li onClick={props.onClose} className={classes.side__link}>
+                <Link to="/realorders">My Orders</Link>
+              </li>}
+              {isLoggedIn && <li onClick={props.onClose} className={classes.side__link}>
                 <Link to="/profile">Profile</Link>
-              </li>
+              </li>}
               <li onClick={props.onClose} className={classes.side__link}>
                 <Link to="/">About us</Link>
               </li>
