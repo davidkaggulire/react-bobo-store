@@ -11,7 +11,7 @@ const DUMMY_PRODUCTS = [
     title: "Scarf",
     quantity: 100,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum faucibus vitae aliquet nec. Feugiat in fermentum posuere urna. Facilisis magna etiam tempor orci eu lobortis elementum nibh. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Augue lacus viverra vitae congue eu consequat ac felis. Nec feugiat in fermentum posuere urna nec tincidunt praesent. Nunc sed augue lacus viverra vitae congue. Id diam maecenas ultricies mi. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam.",
+      "Warm comfy scarfs",
     image:
       "https://images.pexels.com/photos/1436134/pexels-photo-1436134.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
@@ -20,7 +20,7 @@ const DUMMY_PRODUCTS = [
     price: 5,
     title: "Socks",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "Socks that match any wear",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/2658451/pexels-photo-2658451.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -31,7 +31,7 @@ const DUMMY_PRODUCTS = [
     price: 5,
     title: "Laces",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "Gentle laces for any wear",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/1808398/pexels-photo-1808398.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -42,7 +42,7 @@ const DUMMY_PRODUCTS = [
     price: 5,
     title: "Tees",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "Tees for women",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/2681741/pexels-photo-2681741.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -53,7 +53,7 @@ const DUMMY_PRODUCTS = [
     price: 5,
     title: "Bags",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "Bags for women",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/7255442/pexels-photo-7255442.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -64,7 +64,7 @@ const DUMMY_PRODUCTS = [
     price: 5,
     title: "Wristbands",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      "The perfect wristbands",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/1619801/pexels-photo-1619801.jpeg?auto=compress&cs=tinysrgb&w=600",

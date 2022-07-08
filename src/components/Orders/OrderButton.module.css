@@ -24,6 +24,12 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .order_button {
+    font-size: 1.6rem;
+  }
+}
+
 @media screen and (max-width: 280px) {
   .order_button {
     font-size: 1.3rem;

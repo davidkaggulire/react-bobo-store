@@ -3,7 +3,16 @@ import retrieveStoredToken from "./retrieveStoredToken";
 
 const loginSlice = createSlice({
   name: "login",
-  initialState: { isLoggedIn: false, token: "", expirationTime: 0, remainingTime: 0, email: "", displayName: "", emailVerified: false },
+  initialState: {
+    isLoggedIn: false,
+    token: "",
+    expirationTime: 0,
+    remainingTime: 0,
+    email: "",
+    displayName: "",
+    emailVerified: false,
+    uid: "",
+  },
   reducers: {
     logout(state, action) {
       state.isLoggedIn = action.payload.isLoggedIn;
@@ -13,7 +22,7 @@ const loginSlice = createSlice({
       state.email = action.payload.email;
       state.displayName = action.payload.displayName;
     },
-    login(state, action){
+    login(state, action) {
       state.token = action.payload.token;
       state.expirationTime = action.payload.expirationTime;
       state.email = action.payload.email;
@@ -22,32 +31,30 @@ const loginSlice = createSlice({
 
       const value = retrieveStoredToken(state.token, state.expirationTime);
       console.log(value);
-      if(value !== null && value !== undefined){
+      if (value !== null && value !== undefined) {
         state.remainingTime = value.duration;
-        state.token = value.token
-        state.isLoggedIn = true
+        state.token = value.token;
+        state.isLoggedIn = true;
+      } else {
+        state.isLoggedIn = false;
+        state.token = "";
+        state.remainingTime = "";
+        state.expirationTime = "";
       }
-      else{
-        state.isLoggedIn = false
-        state.token = ""
-        state.remainingTime = ""
-        state.expirationTime = ""
-      }
-    }, expire(state, action){
+    },
+    expire(state, action) {
       state.remainingTime = action.payload.remainingTime;
-      if(state.remainingTime <= 3600){
-        state.isLoggedIn = false
-        state.token = ""
-        state.remainingTime = ""
-        state.expirationTime = ""
-      }else{
-        state.isLoggedIn = true
+      if (state.remainingTime <= 3600) {
+        state.isLoggedIn = false;
+        state.token = "";
+        state.remainingTime = "";
+        state.expirationTime = "";
+      } else {
+        state.isLoggedIn = true;
       }
-    }
+    },
   },
 });
-
-
 
 export const loginActions = loginSlice.actions;
 

@@ -2,16 +2,15 @@
   padding: 2rem;
   height: 85vh;
   width: 100%;
-  border-radius: 0.5rem;
-  margin:2rem;
-  
+  margin-top: 5rem;
+  top:0;
   font-size: 1.4rem;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: #008B8B;
-  background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark));
+  /* background-color: #008B8B; */
+  background-image: linear-gradient(to right bottom,white, #0000001A);
   
   overflow: hidden;
   display: flex;
@@ -35,7 +34,7 @@
 .mainheading {
   margin-top: 0.5rem;
   font-size: 5.5rem;;
-  color:#eee;
+  color: grey;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -196,12 +195,9 @@
 }
 
 @media screen and (max-width: 325px) {
-  .welcome_section{
-    margin:0;
-    padding:0
-  }
 
   .mainheading {
+    margin-top: 2rem;
     font-size: 3.0rem;
     text-align: center;
     letter-spacing: 1.0rem;

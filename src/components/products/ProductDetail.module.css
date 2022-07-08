@@ -1,4 +1,5 @@
 .shopping {
+  margin-top: 7rem;
   background-color: white;
   padding: 1.5rem;
   font-size: 1.5rem;
@@ -18,6 +19,9 @@
 
 .cart_item img {
   height: 30rem;
+  width: 30rem;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .actions {

@@ -8,7 +8,8 @@ const DUMMY_PRODUCTS = [
     price: 6,
     title: "Scarf",
     quantity: 100,
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    description:
+      "Warm comfy scarfs",
     image:
       "https://images.pexels.com/photos/1436134/pexels-photo-1436134.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
@@ -16,7 +17,8 @@ const DUMMY_PRODUCTS = [
     id: "p2",
     price: 5,
     title: "Socks",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    description:
+      "Socks that match any wear",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/2658451/pexels-photo-2658451.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -26,7 +28,8 @@ const DUMMY_PRODUCTS = [
     id: "p3",
     price: 5,
     title: "Laces",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    description:
+      "Gentle laces for any wear",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/1808398/pexels-photo-1808398.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -36,7 +39,8 @@ const DUMMY_PRODUCTS = [
     id: "p4",
     price: 5,
     title: "Tees",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    description:
+      "Tees for women",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/2681741/pexels-photo-2681741.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -46,7 +50,8 @@ const DUMMY_PRODUCTS = [
     id: "p5",
     price: 5,
     title: "Bags",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    description:
+      "Bags for women",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/7255442/pexels-photo-7255442.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -56,7 +61,8 @@ const DUMMY_PRODUCTS = [
     id: "p6",
     price: 5,
     title: "Wristbands",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+    description:
+      "The perfect wristbands",
     quantity: 10,
     image:
       "https://images.pexels.com/photos/1619801/pexels-photo-1619801.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -66,6 +72,7 @@ const DUMMY_PRODUCTS = [
 const Products = () => {
   return (
     <Fragment>
+      <h4 className={classes.product__title}>FEATURED PRODUCTS</h4>
       <section className={classes.section_product}>
         {DUMMY_PRODUCTS.map((product) => (
           <ProductItem

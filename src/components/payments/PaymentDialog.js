@@ -10,8 +10,7 @@ const PaymentDialog = (props) => {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
   const contactInfo = useSelector((state) => state.contact.contactData);
-  const email = useSelector(state=> state.login.email);
-  const displayName = useSelector(state => state.login.displayName);
+  const token = useSelector(state=> state.login.token);
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
 
@@ -24,8 +23,7 @@ const PaymentDialog = (props) => {
     const inputData = {
       contactInfo,
       orderData: cartItems,
-      email,
-      displayName
+      token
     };
 
     console.log(inputData);

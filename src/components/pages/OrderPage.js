@@ -15,12 +15,12 @@ const OrderPage = () => {
   return (
     <div className="orders">
       <div className={classes.heading}>
-        <h2 className={classes.order__title}>Your Order</h2>
+        <h2 className={classes.order__title}>Checkout Page</h2>
       </div>
       <div className={classes.order_details}>
         <OrderForm />
         <Card>
-          <h3 className={classes.cart__title}>Items to order</h3>
+          <h3 className={classes.cart__title}>Items to purchase</h3>
           {cartItems.length > 0 &&
             cartItems.map((item) => (
               <Orders
