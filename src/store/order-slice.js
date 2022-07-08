@@ -4,11 +4,13 @@ const orderSlice = createSlice({
     name: "order",
     initialState: {
         orders: [],
-        status: ""
+        changed: false,
     },
     reducers:{
         confirmOrder(state, action){
-            state.status = action.payload.status;
+            state.orders = action.payload.orders;
+        },
+        showOrders(state, action){
             state.orders = action.payload.orders;
         }
     }
