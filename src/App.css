@@ -17,6 +17,7 @@
   --color-secondary-dark: #008080;
 
   --color-theme: #eee;
+  --helio-color-shadow: #0000001A;
 
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
@@ -55,7 +56,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Questrial", sans-serif;
   font-weight: 400;
   line-height: 1.6;
   /* background-image: linear-gradient(
@@ -65,32 +66,32 @@ body {
   ); */
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--color-grey-light-1);
+  /* background-color: var(--color-grey-light-1); */
+  /* background-color: #5D4109FF; */
   color: var(--color-grey-dark-2);
   min-height: 100vh;
 }
 
-main{
-  margin-top: 8rem;
+main {
+  margin-top: 2rem;
 }
 
-.centered{
+.centered {
   text-align: center;
   font-size: 1.6rem;
   font-weight: bold;
 }
 
-.orders{
+.orders {
+  margin-top: 5rem;
   background-color: white;
-    padding: 1.5rem;
-    font-size: 1.5rem;
-    border-bottom: 1px solid var(--color-theme);
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--color-theme);
 }
 
-.order-title{
+.order-title {
   border-bottom: 1px solid var(--color-theme);
   font-size: 3rem;
   text-transform: capitalize;
 }
-
-
