@@ -43,3 +43,9 @@
     align-content: center;
   }
 }
+
+@media screen and (max-width: 370px) {
+  .side__element {
+    font-size: 1.8rem;
+  }
+}
