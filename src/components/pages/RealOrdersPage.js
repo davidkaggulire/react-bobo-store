@@ -10,7 +10,7 @@ const RealOrdersPage = () => {
       <h3 className={classes.real__orders_title}>My orders</h3>
 
       {orderItems.length === 0 && (
-        <p className={classes.empty}>No products added to cart</p>
+        <p className={classes.empty}>No orders have been made as yet</p>
       )}
       {orderItems.length > 0 &&
         orderItems.map((item) =>
