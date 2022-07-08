@@ -5,21 +5,21 @@ import { cartActions } from "./cart-slice";
 export const postOrderData = (inputData, url, navigate, setIsLoading) => {
   return async (dispatch) => {
     const postOrder = async () => {
+      const token = inputData.token;
       const response = await fetch(url, {
         method: "POST",
         body: JSON.stringify({
-          email: inputData.email,
-          displayName: inputData.displayName,
           firstName: inputData.contactInfo.firstName,
           lastName: inputData.contactInfo.lastName,
           country: inputData.contactInfo.country,
           address: inputData.contactInfo.address,
           city: inputData.contactInfo.city,
-          orderData: inputData.orderData
+          orderData: inputData.orderData,
         }),
         headers: {
           "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
+          "Access-Control-Allow-Origin": "*",
+          "Authorization": `Bearer ${token}`,
         },
       });
 
@@ -40,7 +40,6 @@ export const postOrderData = (inputData, url, navigate, setIsLoading) => {
         console.log(response);
         dispatch(
           orderActions.confirmOrder({
-            status: "",
             orders: [],
           })
         );
@@ -78,6 +77,46 @@ export const postOrderData = (inputData, url, navigate, setIsLoading) => {
       dispatch(
         uiActions.setNotification({
           status: "error",
+        })
+      );
+    }
+  };
+};
+
+export const fetchOrderData = (token) => {
+  return async (dispatch) => {
+    const fetchData = async () => {
+      const url =
+        "https://us-central1-bobostore-3aabe.cloudfunctions.net/app/api/v1/orders";
+      
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Authorization": `Bearer ${token}`,
+          },
+        });
+
+      if (!response.ok) {
+        throw new Error("Could not fetch order data!");
+      }
+
+      const data = await response.json();
+
+      return data;
+    };
+
+    try {
+      const orderData = await fetchData();
+      dispatch(
+        orderActions.showOrders({
+          orders: orderData.data || [],
+        })
+      );
+    } catch (error) {
+      dispatch(
+        uiActions.showNotification({
+          status: "error",
+          message: "No orders found",
         })
       );
     }
