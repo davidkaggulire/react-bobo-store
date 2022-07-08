@@ -1,9 +1,9 @@
-.authform{
+.authform {
   margin-top: 3rem;
 }
 
 .form_section {
-  margin: 4rem auto;
+  margin: 10rem auto;
   text-align: center;
 }
 
@@ -46,7 +46,7 @@
   font-size: 1.6rem;
 }
 
-.actions button:hover {
+.actions button:hover{
   color: white;
   background-color: blueviolet;
 }
@@ -57,45 +57,58 @@
   color: var(--color-theme);
 }
 
-.forgot__link{
+.forgot__link {
   font-size: 1.4rem;
 }
 
 @media screen and (max-width: 900px) {
-    .authform{
-        width: 50%;
-    }
+  .authform {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .authform{
-        width: 80%;
-    }
+  .authform {
+    width: 80%;
+  }
 
-    .form_section {
-      margin-top: 10rem;
-    }
+  .form_section {
+    margin-top: 10rem;
+  }
 
-    .heading {
-      font-size: 1.6rem;
-    }
+  .heading {
+    font-size: 2rem;
+  }
 
-    .control {
-      font-size: 1.4rem;
-    }
+  .control {
+    font-size: 1.6rem;
+  }
 
-    .actions button {
-      font-size: 1.4rem;
-    }
+  .actions button {
+    font-size: 1.6rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .authform{
-        width: 92%;
-    }
+  .authform {
+    width: 92%;
+  }
 
-    .control {
-        margin: 1.4rem;
-        padding: 0.5rem;
-      }
+  .control {
+    margin: 1.4rem;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .actions button {
+    font-size: 1.6rem;
+  }
+
+  .forgot__link {
+    font-size: 1.6rem;
+  }
 }
