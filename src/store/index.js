@@ -8,12 +8,14 @@ import cartSlice from "./cart-slice";
 import loginSlice from "./loginSlice";
 import uiSlice from "./ui-slice";
 import contactSlice from "./contact-slice";
+import orderSlice from "./order-slice";
 
 const reducers = combineReducers({
   login: loginSlice.reducer,
   ui: uiSlice.reducer,
   cart: cartSlice.reducer,
-  contact: contactSlice.reducer
+  contact: contactSlice.reducer,
+  order: orderSlice.reducer
 });
 
 const persistConfig = {
