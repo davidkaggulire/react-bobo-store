@@ -1,0 +1,21 @@
+.real__orders {
+  /* margin-top: rem; */
+  background-color: white;
+  /* height: 100%; */
+  padding: 2rem;
+}
+
+.real__orders_title {
+  color: #303030;
+  font-family: "Questrial", sans-serif;
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.empty {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
