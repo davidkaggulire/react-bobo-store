@@ -18,6 +18,8 @@
 
 .side__link:hover {
   color: orange;
+  border-left: 4px solid #1ad1b9;
+  border-bottom: 2px solid var(--color-theme);
 }
 
 .side__icon {
