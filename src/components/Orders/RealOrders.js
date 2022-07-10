@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classes from "./RealOrders.module.css";
 
 const RealOrders = (props) => {
@@ -19,26 +20,28 @@ const RealOrders = (props) => {
   }
 
   return (
-    <div className={classes.order_item}>
-      <div className={classes.order__image}>
-        <img src={image} alt="order item" />
-      </div>
+    <Link to={`/realorders/${id}`}>
+      <div className={classes.order_item}>
+        <div className={classes.order__image}>
+          <img src={image} alt="order item" />
+        </div>
 
-      <div className={classes.details}>
-        <h4 className={classes.title}>
-          {quantity}x {title}
-        </h4>
-        <p>
-          <span>{description}</span>
-        </p>
-        <p>${totalPrice}</p>
+        <div className={classes.details}>
+          <h4 className={classes.title}>
+            {quantity}x {title}
+          </h4>
+          <p>
+            <span>{description}</span>
+          </p>
+          <p>${totalPrice}</p>
+        </div>
+        <div className={classes.order__status}>
+          <p className={`${cssClasses} ${classes.status}`}>
+            <span>{status}</span>
+          </p>
+        </div>
       </div>
-      <div className={classes.order__status}>
-        <p className={`${cssClasses} ${classes.status}`}>
-          <span>{status}</span>
-        </p>
-      </div>
-    </div>
+    </Link>
   );
 };
 
