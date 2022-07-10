@@ -107,6 +107,7 @@ export const fetchOrderData = (token) => {
 
     try {
       const orderData = await fetchData();
+      console.log(orderData);
       dispatch(
         orderActions.showOrders({
           orders: orderData.data || [],
@@ -114,7 +115,7 @@ export const fetchOrderData = (token) => {
       );
     } catch (error) {
       dispatch(
-        uiActions.showNotification({
+        uiActions.setNotification({
           status: "error",
           message: "No orders found",
         })
