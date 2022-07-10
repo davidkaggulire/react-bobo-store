@@ -1,10 +1,18 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import DropDown from "../UI/DropDown";
 import classes from "./Sidebar.module.css";
+import { fetchOrderData } from "../../store/order-actions";
 
 const Sidebar = (props) => {
-  const isLoggedIn = useSelector((state) => state.login.isLoggedIn); 
+  const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
+  const token = useSelector((state) => state.login.token);
+
+  const dispatch = useDispatch();
+
+  const fetchOrdersHandler = () => {
+    dispatch(fetchOrderData(token));
+  }
 
   return (
     <DropDown onClose={props.onClose}>
@@ -26,7 +34,7 @@ const Sidebar = (props) => {
               </li>}
 
               {isLoggedIn && <li onClick={props.onClose} className={classes.side__link}>
-                <Link to="/realorders">My Orders</Link>
+                <Link to="/realorders" onClick={fetchOrdersHandler}>My Orders</Link>
               </li>}
               {isLoggedIn && <li onClick={props.onClose} className={classes.side__link}>
                 <Link to="/profile">Profile</Link>
