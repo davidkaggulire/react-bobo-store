@@ -5,6 +5,7 @@ import { loginActions } from "../../store/loginSlice";
 
 import classes from "./Navigation.module.css";
 import Sidebar from "./Sidebar";
+import { fetchOrderData } from "../../store/order-actions";
 
 const Navigation = () => {
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
@@ -14,6 +15,12 @@ const Navigation = () => {
   const name = useSelector((state) => state.login.displayName);
 
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
+
+  const token = useSelector((state) => state.login.token);
+
+  const fetchOrdersHandler = () => {
+    dispatch(fetchOrderData(token));
+  }
 
   const logoutHandler = () => {
     // send request to logout user
@@ -70,6 +77,11 @@ const Navigation = () => {
                 <span className={classes.badge}>{cartQuantity}</span>
               </Link>
             </li>
+            {isLoggedIn && (
+              <li className={classes.menu}>
+                <Link to="/realorders" onClick={fetchOrdersHandler}>Orders</Link>
+              </li>
+            )}
           </div>
           <div className={classes.nav_buttons}>
             {isLoggedIn && (
