@@ -39,12 +39,17 @@ const RealOrdersPage = React.lazy(() =>
   import("./components/pages/RealOrdersPage")
 );
 
+const OrderDetail = React.lazy(() =>
+  import("./components/Orders/OrderDetail")
+);
+
 let logoutTimer;
 
 function App() {
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
   const navigate = useNavigate();
 
+  const changed = useSelector((state) => state.order.changed);
   const expirationTime = useSelector((state) => state.login.expirationTime);
   const token = useSelector((state) => state.login.token);
   const dispatch = useDispatch();
@@ -73,9 +78,12 @@ function App() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      dispatch(fetchOrderData(token));
+      if(changed) {
+        dispatch(fetchOrderData(token));
+      }
+      
     }
-  }, [dispatch, isLoggedIn, token]);
+  }, [dispatch, isLoggedIn, token, changed]);
 
   return (
     <Layout>
@@ -95,6 +103,7 @@ function App() {
           {isLoggedIn && (
             <Route path="/realorders" element={<RealOrdersPage />} />
           )}
+          {isLoggedIn && <Route path="/realorders/:orderId/*" element={<OrderDetail />} />}
           <Route path="/resetPassword" element={<ResetPassword />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
