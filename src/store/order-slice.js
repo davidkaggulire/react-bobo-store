@@ -12,6 +12,7 @@ const orderSlice = createSlice({
         },
         showOrders(state, action){
             state.orders = action.payload.orders;
+            state.changed = true;
         }
     }
 });
