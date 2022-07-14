@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import classes from "./OrderDetail.module.css";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const timeConverter = (time) => {
   // converting firestore timestamp to normal date
@@ -26,6 +27,7 @@ const timeConverter = (time) => {
 const OrderDetail = () => {
   const orderParams = useParams();
   const orderItems = useSelector((state) => state.order.orders);
+  const navigate = useNavigate();
 
   const { orderId } = orderParams;
 
@@ -45,9 +47,15 @@ const OrderDetail = () => {
   const finalDate = timeConverter(createdAt);
   //   console.log(finalDate);
 
+  // navigating backwards
+  const previousPageHandler = () => {
+    navigate(-1);
+  }
+
   return (
     <div className={classes.order__detail}>
       <div className={classes.header}>
+        <MdKeyboardArrowLeft onClick={previousPageHandler} className={classes.back_button}/>
         <h3 className={classes.order__name}>{order.name}</h3>
       </div>
 
