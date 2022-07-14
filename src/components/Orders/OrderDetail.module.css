@@ -4,6 +4,11 @@
   margin-top:7vh;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
 .order__name {
   color: black;
 }
@@ -21,23 +26,19 @@
     margin-right: 2rem;
 }
 
-.icon__btn {
-  background-color: aqua;
-  color: black;
-  border: 0;
-  margin-right: 0.8rem;
-}
-
-.back__icon {
-  display: block;
-  fill: black;
-  height: 2.25rem;
-  width: 2.25rem;
-}
-
 .middle_div{
     border-left: 1px solid var(--color-theme);
     border-right: 1px solid var(--color-theme);
+}
+
+.back_button{
+  font-size: 3rem;
+  margin-right: 2rem;
+}
+
+.back_button:hover{
+  color: #1ad1b9;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%);
 }
 
 @media screen and (max-width: 600px) {
