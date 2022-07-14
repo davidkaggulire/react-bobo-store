@@ -71,12 +71,12 @@ const Navigation = () => {
                 <Link to="/profile">Profile</Link>
               </li>
             )}
-            <li className={classes.menu}>
+            {/* <li className={classes.menu}>
               <Link to="/cart" className={classes.button}>
                 <span>Cart</span>
                 <span className={classes.badge}>{cartQuantity}</span>
               </Link>
-            </li>
+            </li> */}
             {isLoggedIn && (
               <li className={classes.menu}>
                 <Link to="/realorders" onClick={fetchOrdersHandler}>Orders</Link>

@@ -8,8 +8,15 @@ const DropdownBackdrop = (props) => {
 };
 
 const DropDownOverlay = (props) => {
+  let cssClasses = "";
+
+  if (props.onClose) {
+    cssClasses = classes.dropdown__modal_close;
+  } else {
+    cssClasses = classes.dropdown__modal;
+  }
   return (
-    <div className={classes.dropdown__modal}>
+    <div className={cssClasses}>
       <div className={classes.content}>{props.children}</div>
     </div>
   );

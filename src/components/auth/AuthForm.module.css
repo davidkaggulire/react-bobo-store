@@ -61,6 +61,10 @@
   font-size: 1.4rem;
 }
 
+.forgot__link:hover{
+  color: #1ad1b9;
+}
+
 @media screen and (max-width: 900px) {
   .authform {
     width: 50%;

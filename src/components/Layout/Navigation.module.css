@@ -10,7 +10,7 @@
   width: 100%;
   z-index: 999;
   overflow: hidden;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 5rem;
 }
 
@@ -25,6 +25,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 1.6rem;
+  padding: 0.5rem;
 }
 
 .nav_logo {
@@ -144,7 +145,22 @@
 } */
 
 .cart_link {
-  display: none;
+  display: block;
+  margin-right: 1.5rem;
+}
+
+.cart__icon {
+  fill: #c69963;
+  height: 2.25rem;
+  width: 2.25rem;
+  margin-top: -1rem;
+}
+
+.badge__icon {
+  font-weight: bold;
+  text-align: center;
+  color: #1d1d1d;
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 600px) {
