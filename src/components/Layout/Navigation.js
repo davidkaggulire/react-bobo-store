@@ -6,6 +6,8 @@ import { loginActions } from "../../store/loginSlice";
 import classes from "./Navigation.module.css";
 import Sidebar from "./Sidebar";
 import { fetchOrderData } from "../../store/order-actions";
+import { MdMenu, MdPowerSettingsNew } from "react-icons/md";
+import { BsCart2 } from "react-icons/bs";
 
 const Navigation = () => {
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
@@ -20,7 +22,7 @@ const Navigation = () => {
 
   const fetchOrdersHandler = () => {
     dispatch(fetchOrderData(token));
-  }
+  };
 
   const logoutHandler = () => {
     // send request to logout user
@@ -53,9 +55,10 @@ const Navigation = () => {
         <ul className={classes.nav_element}>
           <div className={classes.nav_logo}>
             <button className={classes.icon__btn} onClick={viewMenuHandler}>
-              <svg className={classes.feature__icon}>
+              {/* <svg className={classes.feature__icon}>
                 <use xlinkHref="img/sprite.svg#icon-menu"></use>
-              </svg>
+              </svg> */}
+              <MdMenu className={classes.feature__icon} />
             </button>
             <li className={classes.logo}>
               <Link to="/">Bobo</Link>
@@ -79,7 +82,9 @@ const Navigation = () => {
             </li> */}
             {isLoggedIn && (
               <li className={classes.menu}>
-                <Link to="/realorders" onClick={fetchOrdersHandler}>Orders</Link>
+                <Link to="/realorders" onClick={fetchOrdersHandler}>
+                  Orders
+                </Link>
               </li>
             )}
           </div>
@@ -96,18 +101,22 @@ const Navigation = () => {
             <li className={classes.cart_link}>
               <Link to="/cart" className={classes.cart__menu}>
                 <span className={classes.badge__icon}>{cartQuantity}</span>
-                <svg className={classes.cart__icon}>
+                <BsCart2 className={classes.cart__icon}/>
+                {/* <svg className={classes.cart__icon}>
                   <use xlinkHref="img/sprite.svg#icon-shopping-cart"></use>
-                </svg>
+                </svg> */}
               </Link>
             </li>
 
             {isLoggedIn && (
               <li className={classes.menu}>
                 <button className={classes.logoutbtn} onClick={logoutHandler}>
-                  <svg className={classes.feature__icon_switch}>
+                  <MdPowerSettingsNew
+                    className={classes.feature__icon_switch}
+                  />
+                  {/* <svg className={classes.feature__icon_switch}>
                     <use xlinkHref="img/sprite.svg#icon-switch"></use>
-                  </svg>
+                  </svg> */}
                 </button>
               </li>
             )}
