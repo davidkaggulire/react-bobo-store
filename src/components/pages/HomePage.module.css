@@ -242,9 +242,15 @@
 
 }
 
-@media screen and (max-width: 345px) {
+@media screen and (max-width: 380px) {
   .welcome_section{
     background-image: url(../../../public/img/tiny.jpg);
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .welcome_section{
+    background-image: url(../../../public/img/smallest.jpg);
   }
 
   .mainheading {
