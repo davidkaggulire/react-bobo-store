@@ -13,7 +13,7 @@ const DUMMY_PRODUCTS = [
     description:
       "Warm comfy scarfs",
     image:
-      "https://images.pexels.com/photos/1436134/pexels-photo-1436134.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6633371/pexels-photo-6633371.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: "p2",
@@ -23,7 +23,7 @@ const DUMMY_PRODUCTS = [
       "Socks that match any wear",
     quantity: 10,
     image:
-      "https://images.pexels.com/photos/2658451/pexels-photo-2658451.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/4715341/pexels-photo-4715341.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 
   {
@@ -34,18 +34,18 @@ const DUMMY_PRODUCTS = [
       "Gentle laces for any wear",
     quantity: 10,
     image:
-      "https://images.pexels.com/photos/1808398/pexels-photo-1808398.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/7119090/pexels-photo-7119090.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 
   {
     id: "p4",
     price: 5,
-    title: "Tees",
+    title: "TShirts",
     description:
-      "Tees for women",
+      "TShirts",
     quantity: 10,
     image:
-      "https://images.pexels.com/photos/2681741/pexels-photo-2681741.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/6604551/pexels-photo-6604551.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 
   {
@@ -56,18 +56,18 @@ const DUMMY_PRODUCTS = [
       "Bags for women",
     quantity: 10,
     image:
-      "https://images.pexels.com/photos/7255442/pexels-photo-7255442.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 
   {
     id: "p6",
     price: 5,
-    title: "Wristbands",
+    title: "Handkerchiefs",
     description:
-      "The perfect wristbands",
+      "The perfect Handkerchiefs",
     quantity: 10,
     image:
-      "https://images.pexels.com/photos/1619801/pexels-photo-1619801.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "https://images.pexels.com/photos/945698/pexels-photo-945698.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
 
