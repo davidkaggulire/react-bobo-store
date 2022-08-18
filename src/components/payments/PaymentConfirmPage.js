@@ -15,7 +15,7 @@ const PaymentConfirmPage = () => {
     <div className={classes.receipt_section}>
       <Card>
         <p>Payment Confirmed</p>
-        <p>Order received</p>
+        <p>Yay! Order placed! 🛒 You will receive an email confirmation confirming your order.</p>
         <h3>Items purchased</h3>
         {/* {cartItems.length > 0 &&
           cartItems.map((item) => (
