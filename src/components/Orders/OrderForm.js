@@ -213,7 +213,7 @@ const OrderForm = () => {
         onBlur={validateCityHandler}
       />
       {isLoading && <LoadingSpinner />}
-      <button>Pay</button>
+      <button>Submit</button>
     </form>
   );
 };
