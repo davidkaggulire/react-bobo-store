@@ -6,10 +6,6 @@ import classes from "./Payments.module.css";
 const Payments = () => {
   const [confirmBoxIsShown, setConfirmBoxIsShown] = useState(false);
 
-  const onChangePayHandler = () => {
-    console.log("pay");
-  };
-
   const showConfirmBoxHandler = () => {
     setConfirmBoxIsShown(true)
   }
@@ -31,27 +27,7 @@ const Payments = () => {
           All transactions are secure and encrypted
         </p>
         <form className={classes.pay_form} onSubmit={submitHandler}>
-          <input
-            type="radio"
-            id="credit-card"
-            value="Credit card"
-            checked=""
-            onChange={onChangePayHandler}
-          />
-          <label htmlFor="credit-card">Credit card</label>
-          <br></br>
-
-          <input
-            type="radio"
-            id="mobile-money"
-            value="Mobile money"
-            checked=""
-            onChange={onChangePayHandler}
-          />
-          <label htmlFor="mobile-money">Mobile money</label>
-          <br></br>
-
-          <button className={classes.pay_btn} onClick={showConfirmBoxHandler}>Complete order</button>
+          <button className={classes.pay_btn} onClick={showConfirmBoxHandler}>Buy Now</button>
         </form>
       </Card>
     </div>
