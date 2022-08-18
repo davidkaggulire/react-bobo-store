@@ -2,8 +2,14 @@ import { orderActions } from "./order-slice";
 import { uiActions } from "./ui-slice";
 import { cartActions } from "./cart-slice";
 
+import {loadStripe} from '@stripe/stripe-js';
+
+
+
 export const postOrderData = (inputData, url, navigate, setIsLoading) => {
   return async (dispatch) => {
+    const stripe = await loadStripe(process.env.REACT_APP_STRIPE_SECRET_KEY);
+
     const postOrder = async () => {
       const token = inputData.token;
       const response = await fetch(url, {
@@ -34,6 +40,7 @@ export const postOrderData = (inputData, url, navigate, setIsLoading) => {
 
     try {
       const response = await postOrder();
+      console.log(response);
       console.log(response.status);
 
       if (response.status === "fail") {
@@ -70,7 +77,11 @@ export const postOrderData = (inputData, url, navigate, setIsLoading) => {
           })
         );
 
-        navigate("../paymentConfirm", { replace: true });
+        await stripe.redirectToCheckout({
+          sessionId: response.session.id,
+        })
+
+        // navigate("../paymentConfirm", { replace: true });
       }
     } catch (error) {
       console.log(error);
@@ -114,12 +125,13 @@ export const fetchOrderData = (token) => {
         })
       );
     } catch (error) {
-      dispatch(
-        uiActions.setNotification({
-          status: "error",
-          message: "No orders found",
-        })
-      );
+      // dispatch(
+      //   uiActions.setNotification({
+      //     status: "error",
+      //     message: "No orders found",
+      //   })
+      // );
+      console.log("no orders");
     }
   };
 };
