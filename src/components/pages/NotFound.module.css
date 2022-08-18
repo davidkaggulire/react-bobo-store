@@ -1,13 +1,14 @@
-.centered{
-    text-align: center;
-    font-size: 4rem;
-    letter-spacing: 2rem;
-    color: rgb(161, 123, 123);
-    padding: 2rem;
+.centered {
+  margin-top: 5rem;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 2rem;
+  color: rgb(161, 123, 123);
+  padding: 2rem;
 }
 
 @media screen and (max-width: 400px) {
-    .centered {
-      font-size: 3rem;
-    }
+  .centered {
+    font-size: 3rem;
   }
+}
