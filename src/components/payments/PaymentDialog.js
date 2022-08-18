@@ -6,6 +6,10 @@ import Modal from "../UI/Modal";
 import classes from "./PaymentDialog.module.css";
 import { postOrderData } from "../../store/order-actions";
 
+// import {loadStripe} from '@stripe/stripe-js';
+
+// const stripe = await loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
 const PaymentDialog = (props) => {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
