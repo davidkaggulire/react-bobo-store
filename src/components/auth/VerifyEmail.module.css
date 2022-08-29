@@ -1,0 +1,138 @@
+.form_div {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.app_heading {
+  color: black;
+}
+
+.form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 0.2rem;
+  padding: 2rem 4rem;
+  border: 1px solid #ccc;
+  font-family: "Roboto", sans-serif;
+}
+
+.input {
+  background-color: transparent !important;
+  padding: 1rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.4rem;
+  color: black;
+  width: 100%;
+  font-size: 1.4rem;
+  font-family: "Roboto", sans-serif;
+  transition: 0.4s ease-in-out;
+}
+
+.input:focus {
+  border: 0.1rem solid #2168d4;
+  outline: none;
+}
+
+.button {
+  background-color: #3690dc;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover {
+  background-color: #2168d4;
+}
+
+.switch {
+  font-size: 1.25rem;
+  text-transform: none;
+}
+
+.switch a {
+  color: #3690dc;
+  font-size: 1.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
+
+.button__holder {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+  .form {
+    width: 60%;
+    padding: 2rem 3rem;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .form {
+    width: 90%;
+    padding: 2rem 2rem;
+  }
+
+  .button__holder {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .input {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 1.45rem;
+  }
+
+  .switch {
+    font-size: 1.4rem;
+  }
+
+  .switch a {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .form {
+    width: 90%;
+    padding: 2rem 3rem;
+  }
+
+  .button__holder {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}

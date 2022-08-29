@@ -138,7 +138,7 @@ const AuthForm = () => {
             </span>
 
             <span className={classes.resetPassword}>
-              <a href="#">Verify account</a>
+              <a href="/verifyEmail">Verify account</a>
             </span>
           </div>
         </form>
