@@ -37,6 +37,8 @@ const ResetPassword = React.lazy(() =>
   import("./components/auth/ResetPassword")
 );
 
+const VerifyEmail = React.lazy(() => import("./components/auth/VerifyEmail"));
+
 const RealOrdersPage = React.lazy(() =>
   import("./components/pages/RealOrdersPage")
 );
@@ -107,6 +109,7 @@ function App() {
           <Route path="/realorders/:orderId/*" element={<OrderDetail />} />
         )}
         <Route path="/resetPassword" element={<ResetPassword />} />
+        <Route path="/verifyEmail" element={<VerifyEmail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       </Suspense>
