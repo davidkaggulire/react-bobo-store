@@ -101,7 +101,7 @@
     }
 }
 
-@media screen and (min-width: 360px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .form {
     width: 90%;
     padding: 2rem 3rem;
@@ -116,6 +116,10 @@
   }
 
   .switch {
+    font-size: 1.4rem;
+  }
+
+  .switch a {
     font-size: 1.4rem;
   }
 }
