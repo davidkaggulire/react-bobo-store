@@ -4,7 +4,7 @@
   color: #fff;
   padding: 1rem;
   position: fixed;
-  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%);
+  /* box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%); */
   top: 0;
   left: 0;
   width: 100%;
@@ -51,7 +51,7 @@
 }
 
 .menu a:hover {
-  color: var(--color-secondary-dark);
+  color: #2168D4;
 }
 
 .nav_buttons {
