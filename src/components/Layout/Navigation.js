@@ -74,12 +74,6 @@ const Navigation = () => {
                 <Link to="/profile">Profile</Link>
               </li>
             )}
-            {/* <li className={classes.menu}>
-              <Link to="/cart" className={classes.button}>
-                <span>Cart</span>
-                <span className={classes.badge}>{cartQuantity}</span>
-              </Link>
-            </li> */}
             {isLoggedIn && (
               <li className={classes.menu}>
                 <Link to="/realorders" onClick={fetchOrdersHandler}>
@@ -94,7 +88,7 @@ const Navigation = () => {
             )}
             {!isLoggedIn && (
               <li className={classes.menu}>
-                <Link to="/auth">Login</Link>
+                <Link to="/login">Login</Link>
               </li>
             )}
 
@@ -102,9 +96,6 @@ const Navigation = () => {
               <Link to="/cart" className={classes.cart__menu}>
                 <span className={classes.badge__icon}>{cartQuantity}</span>
                 <BsCart2 className={classes.cart__icon}/>
-                {/* <svg className={classes.cart__icon}>
-                  <use xlinkHref="img/sprite.svg#icon-shopping-cart"></use>
-                </svg> */}
               </Link>
             </li>
 
