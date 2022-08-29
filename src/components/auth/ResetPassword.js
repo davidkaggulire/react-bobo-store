@@ -66,7 +66,7 @@ const ResetPassword = () => {
 
         setIsLoading(false);
 
-        navigate("../login", { replace: true });
+        // navigate("../login", { replace: true });
       }
     }
   };

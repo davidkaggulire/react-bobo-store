@@ -62,7 +62,7 @@ const VerifyEmail = () => {
 
         setIsLoading(false);
 
-        navigate("../login", { replace: true });
+        // navigate("../login", { replace: true });
       }
     }
   };
