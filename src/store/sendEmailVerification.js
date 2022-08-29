@@ -14,7 +14,8 @@ async function sendVerificationEmail(email, displayName) {
   );
   const resBody = await res.json();
   if (res.status !== 200) {
-    throw Error(resBody.message);
+    // throw Error(resBody.message);
+    return resBody;
   }
 
   return resBody;
