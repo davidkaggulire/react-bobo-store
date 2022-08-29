@@ -8,7 +8,9 @@ import { loginActions } from "./store/loginSlice";
 import { calculateRemainingTime } from "./store/retrieveStoredToken";
 import { fetchOrderData } from "./store/order-actions";
 
-const AuthPage = React.lazy(() => import("./components/pages/AuthPage"));
+// const AuthPage = React.lazy(() => import("./components/pages/AuthPage"));
+const SignUpPage = React.lazy(() => import("./components/pages/SignupPage"));
+const LoginPage = React.lazy(() => import("./components/pages/LoginPage"));
 const HomePage = React.lazy(() => import("./components/pages/HomePage"));
 const ProductsPage = React.lazy(() =>
   import("./components/pages/ProductsPage")
@@ -39,9 +41,7 @@ const RealOrdersPage = React.lazy(() =>
   import("./components/pages/RealOrdersPage")
 );
 
-const OrderDetail = React.lazy(() =>
-  import("./components/Orders/OrderDetail")
-);
+const OrderDetail = React.lazy(() => import("./components/Orders/OrderDetail"));
 
 let logoutTimer;
 
@@ -78,35 +78,37 @@ function App() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      if(changed) {
+      if (changed) {
         dispatch(fetchOrderData(token));
       }
-      
     }
   }, [dispatch, isLoggedIn, token, changed]);
 
   return (
     <Layout>
       <Suspense fallback={<HomePage />}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          {!isLoggedIn && <Route path="/auth" element={<AuthPage />} />}
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/products/:productId/*" element={<ProductDetail />} />
-          {isLoggedIn && <Route path="/profile" element={<ProfilePage />} />}
-          {isLoggedIn && <Route path="/orders" element={<OrderPage />} />}
-          {isLoggedIn && <Route path="/payments" element={<PaymentsPage />} />}
-          {isLoggedIn && (
-            <Route path="/paymentConfirm" element={<PaymentConfirmPage />} />
-          )}
-          {isLoggedIn && (
-            <Route path="/realorders" element={<RealOrdersPage />} />
-          )}
-          {isLoggedIn && <Route path="/realorders/:orderId/*" element={<OrderDetail />} />}
-          <Route path="/resetPassword" element={<ResetPassword />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {!isLoggedIn && <Route path="/signup" element={<SignUpPage />} />}
+        {!isLoggedIn && <Route path="/login" element={<LoginPage />} />}
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products/:productId/*" element={<ProductDetail />} />
+        {isLoggedIn && <Route path="/profile" element={<ProfilePage />} />}
+        {isLoggedIn && <Route path="/orders" element={<OrderPage />} />}
+        {isLoggedIn && <Route path="/payments" element={<PaymentsPage />} />}
+        {isLoggedIn && (
+          <Route path="/paymentConfirm" element={<PaymentConfirmPage />} />
+        )}
+        {isLoggedIn && (
+          <Route path="/realorders" element={<RealOrdersPage />} />
+        )}
+        {isLoggedIn && (
+          <Route path="/realorders/:orderId/*" element={<OrderDetail />} />
+        )}
+        <Route path="/resetPassword" element={<ResetPassword />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       </Suspense>
     </Layout>
   );
