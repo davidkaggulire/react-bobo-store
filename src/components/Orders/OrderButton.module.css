@@ -1,13 +1,14 @@
 .order_button {
   padding: 0.6rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--color-secondary-light);
+  border-radius: 0.2rem;
   background-color: var(--color-secondary-light);
   color: white;
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 2rem;
   text-align: center;
+  border: none;
+  transition: 0.4s ease-in-out;
 }
 
 .order_button:hover,
@@ -15,7 +16,6 @@
   cursor: pointer;
   color: white;
   background-color: var(--color-secondary-dark);
-  border-color: var(--color-secondary-light);
 }
 
 @media screen and (max-width: 490px) {
