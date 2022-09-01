@@ -93,7 +93,7 @@
 .title_carousel {
   margin: 0.5rem;
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   padding-left: 1.5rem;
   width: 20%;
   border-radius: 0.5rem;
@@ -277,8 +277,13 @@
     width: 80%;
   }
 
+  .title_carousel{
+    font-size: 1.8rem;
+  }
+
   .shop_btn {
     width: 25%;
+    font-size: 1.6rem;
   }
 
   .image {
@@ -332,7 +337,7 @@
     margin-bottom: 1rem;
     width: 70%;
     display: block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding-left: 1.5rem;
   }
 
@@ -350,6 +355,7 @@
   .shop_btn {
     width: 65%;
     align-self: center;
+    font-size: 1.8rem;
   }
 }
 
