@@ -9,7 +9,7 @@ const OrderButton = (props) => {
         event.preventDefault();
 
         if(!isLoggedIn){
-            navigate("../auth", { replace: true });
+            navigate("../login", { replace: true });
         }
         else {
             navigate("../orders", { replace: true });
