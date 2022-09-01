@@ -4,7 +4,7 @@
   border-radius: 5px;
   margin: 2rem;
   height: 30%;
-  font-family: 'Questrial',sans-serif;
+  /* font-family: 'Questrial',sans-serif; */
 }
 
 .product:hover{
@@ -19,6 +19,7 @@
   text-decoration: none;
   color: black;
   font-weight: lighter;
+  font-family: 'Averia Sans Libre', cursive;
 }
 
 .link:hover {
@@ -44,6 +45,8 @@
   margin: 1.5rem;
   font-size: 1.3rem;
   justify-content: space-between;
+  font-family: 'Open Sans', sans-serif;
+  /* -webkit-font-smoothing: antialiased; */
 }
 
 .btn {
