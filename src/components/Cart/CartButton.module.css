@@ -10,6 +10,7 @@
   margin-bottom: 2rem;
   text-align: center;
   transition: 0.4s ease-in-out;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .cart_button:hover,
