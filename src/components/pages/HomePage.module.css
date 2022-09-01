@@ -202,6 +202,10 @@
     justify-content: space-between;
     padding: 1rem;
   }
+
+  .title_carousel {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -216,6 +220,10 @@
     text-align: center;
     letter-spacing: 1rem;
     animation-timing-function: 0.4s ease-in;
+  }
+
+  .title_carousel {
+    width: 50%;
   }
 
   .image {
@@ -267,6 +275,10 @@
 
   .head__content {
     width: 80%;
+  }
+
+  .shop_btn {
+    width: 25%;
   }
 
   .image {
@@ -332,11 +344,11 @@
   .mainheading {
     /* top: 50%; */
     font-size: 5rem;
-    letter-spacing: normal;
+    letter-spacing: 1rem;
   }
 
   .shop_btn {
-    width: 70%;
+    width: 65%;
     align-self: center;
   }
 }
