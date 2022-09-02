@@ -1,0 +1,13 @@
+.order_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item_image{
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
