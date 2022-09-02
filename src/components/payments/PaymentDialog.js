@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import LoadingSpinner from "../UI/LoadingSpinner";
@@ -14,7 +14,7 @@ const PaymentDialog = (props) => {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
   const contactInfo = useSelector((state) => state.contact.contactData);
-  const token = useSelector(state=> state.login.token);
+  const token = useSelector((state) => state.login.token);
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
 
@@ -33,24 +33,25 @@ const PaymentDialog = (props) => {
     console.log(inputData);
 
     dispatch(postOrderData(inputData, url, navigate, setIsLoading));
-
   };
 
   return (
-    <Modal onClose={props.onClose}>
-      <div className={classes.pay_dialog}>
-        <p>Do you confirm purchase of the items?</p>
-        <div className={classes.actions}>
-          <button className={classes.confirm_order} onClick={confirmHandler}>
-            Yes
-          </button>
-          <button className={classes.cancel} onClick={props.onClose}>
-            No
-          </button>
+    <Fragment>
+      <Modal onClose={props.onClose}>
+        <div className={classes.pay_dialog}>
+          <p>Do you confirm purchase of the items?</p>
+          <div className={classes.actions}>
+            <button className={classes.confirm_order} onClick={confirmHandler}>
+              Yes
+            </button>
+            <button className={classes.cancel} onClick={props.onClose}>
+              No
+            </button>
+          </div>
         </div>
-        {isLoading && <LoadingSpinner />}
-      </div>
-    </Modal>
+      </Modal>
+      {isLoading && <LoadingSpinner />}
+    </Fragment>
   );
 };
 
