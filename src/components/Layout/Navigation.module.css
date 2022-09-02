@@ -47,7 +47,6 @@
 .menu {
   margin-right: 4rem;
   color: black;
-  /* font-size: 1.6rem; */
 }
 
 .menu a:hover {
@@ -64,15 +63,15 @@
   padding: 0.2rem;
   border-radius: 0.5rem;
   background-color: transparent;
-  border: 1px solid #1ad1b9;
+  background-color: #202e6b;
+  border: none;
+  transition: 0.4s ease-in-out;
 }
 
 .logoutbtn:hover,
 .logoutbtn:active,
 .logoutbtn:focus {
-  /* color: var(--color-theme); */
-  background-color: white;
-  border: 1px solid white;
+  background-color: rgb(243, 110, 110);
 }
 
 .button {
@@ -119,13 +118,13 @@
 }
 
 .feature__icon_switch {
-  fill: black;
+  fill: white;
   height: 2.25rem;
   width: 2.25rem;
+  transition: 0.4s ease-in-out;
 }
 
 .feature__icon_switch:hover {
-  fill: red;
   height: 2.25rem;
   width: 2.25rem;
 }
@@ -135,14 +134,6 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
-/* .badge__icon {
-  display: none;
-}
-
-.cart__icon {
-  display: none;
-} */
 
 .cart_link {
   display: block;
@@ -236,10 +227,6 @@
 }
 
 @media screen and (max-width: 370px) {
-  /* .nav_element {
-    font-size: 2.0rem;
-  } */
-
   .logo {
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -258,7 +245,6 @@
   }
 
   .feature__icon_switch {
-    fill: black;
     height: 2rem;
     width: 2rem;
   }
@@ -273,14 +259,7 @@
     margin-top: 0.1rem;
   }
 
-  /* .feature__icon{
-    fill: black;
-    height: 1.5rem;
-    width: 1.5rem;
-  } */
-
   .feature__icon_switch {
-    /* fill: black; */
     height: 1.5rem;
     width: 1.5rem;
   }
