@@ -19,6 +19,7 @@
 
 .cart_item img {
   height: 20rem;
+  width: 20rem;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -79,7 +80,15 @@
 
 @media screen and (max-width: 800px) {
   .cart_item img {
-    height: 20rem;
+    height: 15rem;
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cart_item img {
+    height: 14rem;
+    width: 14rem;
   }
 }
 
@@ -97,7 +106,7 @@
   }
 
   .cart_item img {
-    width: 60%;
+    width: 25rem;
     height: 25rem;
   }
 
