@@ -360,10 +360,6 @@
 }
 
 @media screen and (max-width: 345px) {
-  .welcome_section {
-    /* background-image: url(../../../public/img/smallest.jpg); */
-  }
-
   .mainheading {
     font-size: 3rem;
     text-align: center;
