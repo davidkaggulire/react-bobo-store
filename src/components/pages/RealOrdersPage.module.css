@@ -1,21 +1,79 @@
 .real__orders {
-  /* margin-top: rem; */
-  background-color: white;
-  /* height: 100%; */
+  background-color: rgb(216, 216, 236);
   padding: 2rem;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 .real__orders_title {
   color: #303030;
-  font-family: "Questrial", sans-serif;
   font-size: 2.5rem;
   margin-top: 2.5rem;
   font-weight: 400;
   text-transform: uppercase;
+  font-family: "Averia Sans Libre", cursive;
 }
 
 .empty {
   margin-top: 2rem;
   font-size: 2rem;
   text-align: center;
+}
+
+.table_titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgb(9 37 64 / 8%);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-size: 2rem;
+  color: white;
+  margin: 2rem;
+  background-color: rgba(18, 3, 3, 0.569);
+}
+
+.table_title_details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+  gap: 10rem;
+}
+
+@media screen and (max-width: 650px) {
+  .table_titles {
+    padding: 1.3rem;
+    margin: 0.1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .real__orders {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .table_title_details {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  .table_titles {
+    width: 95%;
+  }
+
+  .status {
+    display: none;
+  }
 }
