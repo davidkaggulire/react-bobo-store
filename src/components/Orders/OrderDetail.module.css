@@ -2,6 +2,7 @@
   font-size: 1.8rem;
   padding: 2rem;
   margin-top:7vh;
+  font-family: "Averia Sans Libre", cursive;
 }
 
 .header {
@@ -20,6 +21,7 @@
 .detail__page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 4rem;
 }
 
 .date__details{
@@ -39,6 +41,17 @@
 .back_button:hover{
   color: #1ad1b9;
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%);
+}
+
+.order_titles{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-family: "Averia Sans Libre", cursive;
+  /* padding-right: 2rem; */
+  padding-left: 2rem;
 }
 
 @media screen and (max-width: 600px) {
