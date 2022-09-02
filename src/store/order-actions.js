@@ -1,10 +1,17 @@
 import { orderActions } from "./order-slice";
-import { uiActions } from "./ui-slice";
+// import { uiActions } from "./ui-slice";
 import { cartActions } from "./cart-slice";
 
 import {loadStripe} from '@stripe/stripe-js';
+import { toast } from "react-toastify";
 
-
+const toastOptions = {
+  position: "bottom-right",
+  autoClose: 8000,
+  pauseOnHover: true,
+  draggable: true,
+  theme: "dark",
+};
 
 export const postOrderData = (inputData, url, navigate, setIsLoading) => {
   return async (dispatch) => {
@@ -45,29 +52,18 @@ export const postOrderData = (inputData, url, navigate, setIsLoading) => {
 
       if (response.status === "fail") {
         console.log(response);
-        dispatch(
-          orderActions.confirmOrder({
-            orders: [],
-          })
-        );
 
-        dispatch(
-          uiActions.setNotification({
-            status: "error",
-            message: response.message.code,
-          })
-        );
+        // dispatch(
+        //   uiActions.setNotification({
+        //     status: "error",
+        //     message: response.message.code,
+        //   })
+        // );
+        toast.error(response.message.code, toastOptions);
 
         setIsLoading(false);
         navigate("../orders", { replace: true });
       } else {
-        // correct order
-        dispatch(
-          orderActions.confirmOrder({
-            status: "",
-            orders: "",
-          })
-        );
 
         // clear cart on make purchase
         dispatch(
@@ -85,11 +81,13 @@ export const postOrderData = (inputData, url, navigate, setIsLoading) => {
       }
     } catch (error) {
       console.log(error);
-      dispatch(
-        uiActions.setNotification({
-          status: "error",
-        })
-      );
+      // dispatch(
+      //   uiActions.setNotification({
+      //     status: "error",
+      //   })
+      // );
+
+      toast.error("Error connecting to server", toastOptions);
     }
   };
 };
@@ -132,6 +130,7 @@ export const fetchOrderData = (token) => {
       //   })
       // );
       console.log("no orders");
+      toast.error("Server error", toastOptions);
     }
   };
 };
