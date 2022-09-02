@@ -6,7 +6,6 @@ import Layout from "./components/Layout/Layout";
 import NotFound from "./components/pages/NotFound";
 import { loginActions } from "./store/loginSlice";
 import { calculateRemainingTime } from "./store/retrieveStoredToken";
-import { fetchOrderData } from "./store/order-actions";
 
 // const AuthPage = React.lazy(() => import("./components/pages/AuthPage"));
 const SignUpPage = React.lazy(() => import("./components/pages/SignupPage"));
@@ -51,9 +50,7 @@ function App() {
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
   const navigate = useNavigate();
 
-  const changed = useSelector((state) => state.order.changed);
   const expirationTime = useSelector((state) => state.login.expirationTime);
-  const token = useSelector((state) => state.login.token);
   const dispatch = useDispatch();
 
   const logoutHandler = useCallback(() => {
@@ -77,14 +74,6 @@ function App() {
       }
     }
   }, [logoutHandler, isLoggedIn, expirationTime, dispatch, navigate]);
-
-  useEffect(() => {
-    if (isLoggedIn) {
-      if (changed) {
-        dispatch(fetchOrderData(token));
-      }
-    }
-  }, [dispatch, isLoggedIn, token, changed]);
 
   return (
     <Layout>
