@@ -9,10 +9,10 @@ const orderSlice = createSlice({
     reducers:{
         confirmOrder(state, action){
             state.orders = action.payload.orders;
+            state.changed = true;
         },
         showOrders(state, action){
             state.orders = action.payload.orders;
-            state.changed = true;
         }
     }
 });
