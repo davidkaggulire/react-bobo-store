@@ -19,5 +19,11 @@ Full application can be found at the link
 
 https://bobostore-3aabe.web.app
 
+
+### Walk through
+
+[![Bobostore ]](https://vimeo.com/757139005/e1d2aac84a)
+
+
 ### Author
 Design and implementation by `David Kaggulire`
